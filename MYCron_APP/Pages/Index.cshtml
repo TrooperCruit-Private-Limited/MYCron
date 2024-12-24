@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+    ViewData["NavItems"] = new List<string>() { };
+    ViewData["NavLinks"] = new List<string>() { };
+}
+<div id="HomeBlock" class="container-fluid bd-filter-m shadow-lg bg-white">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 text-center p-0">
+            <img class="img-fluid w-100" src="@Url.Content("~/images/homeslideimage.gif")" />
+        </div>
+    </div>
+</div>

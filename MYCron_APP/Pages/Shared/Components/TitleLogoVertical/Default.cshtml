@@ -1,0 +1,6 @@
+﻿@model MYCron_APP.ViewComponents.TitleLogoVerticalViewComponent
+
+<a class="navbar-brand" href="@Url.Content("~")">
+    <img src="~/images/TC.webp" style="width:@(Model.LogoSize)px" /><br />
+    @await Component.InvokeAsync("TitleText", new { TitleClasses = Model.TitleClasses, Suffix = Model.Suffix, SuffixClasses = Model.SuffixClasses })
+</a>    

@@ -1,0 +1,71 @@
+﻿@page
+@model MYCron_APP.Pages.HomeModel
+@{
+    ViewData["Title"] = "Home";
+    ViewData["NavItems"] = new List<string>() { };
+    ViewData["NavLinks"] = new List<string>() { };
+    Layout = "_AppInLayout";
+}
+<div class="container-fluid p-0">
+    <iframe class="col-12 m-0" id="menu-frame" href="about:blank"></iframe>
+    <div class="col-12 collapse home-menu-div" id="homeMenusDiv">
+        <div id="homeMenuDivCard" class="card card-body col-10 bg-white shadow-lg text-dark">
+            <div class="row">
+                <div class="col-3">
+                    <nav id="navbar-example3" class="navbar flex-column align-items-stretch p-3">
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link py-0" href="#item-1">Employee Management</a>
+                            <a class="nav-link py-0" href="#item-2">Consultee Management</a>
+                            <a class="nav-link py-0" href="#item-3">Performance Management</a>
+                            <a class="nav-link py-0" href="#item-4">Personal Management</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 py-0" href="#item-3-1">Item 3-1</a>
+                                <a class="nav-link ms-3 py-0" href="#item-3-2">Item 3-2</a>
+                            </nav>
+                        </nav>
+                    </nav>
+                </div>
+                <div class="col-6 sub-menu-list">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                        <h6 id="item-1">Employee Management</h6>
+                        <nav class="nav nav-pills flex-column mb-2">
+                            <a class="nav-link menu-link py-0" data-tc-href="./OfferLetter/Index">Offer Letters</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./AppointmentLetter/Index">Appointment Letters</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./LeaveManager/Index">Leave Preferences</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./AttendanceTracker/Index">Attendance Tracker</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./EmployeesOnSite/Index">Employees on Site</a>
+                        </nav>
+                        <h6 id="item-2">Consultee Management</h6>
+                        <nav class="nav nav-pills flex-column mb-2">
+                            <a class="nav-link menu-link py-0" data-tc-href="./Consultee/Index">Consultee</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./ConsultencyTracker/Index">Consultency Tracker</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./ConsultencyTracker/Invoice">Generate Invoice</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./ConsultencyTracker/Receipt">Generate Receipt</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./ConsultencyTracker/Dashboard">Payment Dashboard</a>
+                        </nav>
+                        <h6 id="item-3">Performance Management</h6>
+                        <nav class="nav nav-pills flex-column mb-2">
+                            <a class="nav-link menu-link py-0" data-tc-href="./Article/Index">My Articles</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./ProposeReel/Index">Propose Reel</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./Reel/PendingProposals">Confirm Reel</a>
+                        </nav>
+                        <h6 id="item-4">Personal Management</h6>
+                        <nav class="nav nav-pills flex-column mb-2">
+                            <a class="nav-link menu-link py-0" data-tc-href="./PersonalProfile/Edit">My Profile</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./AttendanceTracker/MyAttendance">My Attendance</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./AttendanceTracker/MyLeaves">My Leaves</a>
+                            <a class="nav-link menu-link py-0" data-tc-href="./PersonalProfile/ChangePassword">Change Password</a>
+                        </nav>
+                        <h5 id="item-3-1">Item 3-1</h5>
+                        <p>...</p>
+                        <h5 id="item-3-2">Item 3-2</h5>
+                        <p>...</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h6 id="FavMenus">Favorite Menus</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

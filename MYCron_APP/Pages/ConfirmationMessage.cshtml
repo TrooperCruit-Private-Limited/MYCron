@@ -1,0 +1,16 @@
+﻿@page
+@model MYCron_APP.Pages.ConfirmationMessageModel
+@{
+    Layout = "_ModalLayout";
+}
+<div class="text-center">
+    @if(Model.TransactionStatus.Status == 1)
+    {
+        <i class="fa-solid fa-circle-check text-success fa-5x m-3"></i>
+    }
+    else
+    {
+        <i class="fa-solid fa-circle-exclamation text-danger fa-5x m-3"></i>
+    }
+    <div>@Model.TransactionStatus.Message</div>
+</div>

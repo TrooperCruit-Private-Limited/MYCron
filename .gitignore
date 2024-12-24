@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/MYCron_API/.vs
+/MYCron_API/bin/Debug/net8.0
+/MYCron_API/obj
+/MYCron_APP/.vs
+/MYCron_APP/bin/Debug/net8.0
+/MYCron_APP/obj
+/MYCron_LIB/.vs
+/MYCron_LIB/MYCentralModels/.vs
+/MYCron_LIB/MYCentralModels/bin
+/MYCron_LIB/MYCentralModels/obj
+/MYCron_LIB/MYCentralModels/Properties/PublishProfiles
+/MYCron_LIB/MYCron_Files/obj
+/MYCron_LIB/MYCron_Files/bin/Debug/net8.0
+/MYCron_LIB/MYCron_Files/Properties/PublishProfiles

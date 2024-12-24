@@ -1,0 +1,55 @@
+﻿@page
+@model MYCron_APP.Pages.SignInModel
+@inject IConfiguration Configuration
+@{
+    ViewData["Title"] = "Sign In";
+    ViewData["NavItems"] = new List<string>() { };
+    ViewData["NavLinks"] = new List<string>() { };
+    Layout = "_AppOutLayout";
+}
+<div id="HomeBlock" class="container-fluid bd-filter-m h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-sm-12 text-center p-0">
+            <img class="img-fluid w-auto vh-100" src="@Configuration["MYContentFilesURL"]images/Wallpaper_1.gif" />
+        </div>
+        <div class="col-md-4 col-sm-6 text-center p-4 position-fixed">
+            <form asp-page-handler="OnPostAsync" class="text-dark m-auto" enctype="multipart/form-data">
+                <!-- Email address input-->
+                <div class="form-floating shadow ms-1 me-1 mb-3 bg-white">
+                    <input asp-for="FormModel.EMailorPhone" class="form-control" type="text" placeholder=" ">
+                    <label asp-for="FormModel.EMailorPhone"></label>
+                </div>
+                <!-- Password input-->
+                <div class="form-floating shadow ms-1 me-1 mb-3 bg-white">
+                    <input asp-for="FormModel.Password" class="form-control" type="password" placeholder=" " />
+                    <label asp-for="FormModel.Password"></label>
+                </div>
+                @if(Model.TransactionStatus != null)
+                {
+                    <!-- User Message-->
+                    <div class="shadow ms-1 me-1 mb-3 @(Model.TransactionStatus.Status == 1 ? "text-success" : "text-danger")">
+                        <i class="fa-solid fa-circle-exclamation"></i> @Model.TransactionStatus.Message
+                    </div>
+                }
+                <div class="row p-1">
+                    <div class="col-12 d-grid">
+                        <input class="btn btn-primary shadow" id="nopFormSubmit" type="submit" value="Sign In" />
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-6 d-grid">
+                        <button class="btn btn-light fs-7" id="signUpButton" type="button" onclick="openCommoniFrameModal('@Url.Content("~/SignUp")', 'SignUp')">I am a New User</button>
+                    </div>
+                    <div class="col-6 d-grid">
+                        <button class="btn btn-light fs-7" id="forgotPasswordButton" type="button" onclick="openCommoniFrameModal('@Url.Content("~/SignUp")', 'SignUp')">Forgot Password</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#FormModel_EMailorPhone").focus();
+    });
+</script>

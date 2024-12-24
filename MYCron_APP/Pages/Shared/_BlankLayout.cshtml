@@ -1,0 +1,36 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TrooperCruit</title>
+    <link rel="icon" href="@Configuration["MYContentFilesURL"]favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="@Configuration["MYContentFilesURL"]lib/bootstrap/css/bootstrap.min.css" />
+    <script src="@Configuration["MYContentFilesURL"]lib/jquery/jquery.min.js"></script>
+    <script src="@Configuration["MYContentFilesURL"]lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="@Configuration["MYContentFilesURL"]lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="@Configuration["MYContentFilesURL"]css/site.css" asp-append-version="true" />
+</head>
+<body>
+    @RenderBody()
+    <div class="modal fade" id="CommoniFrameModel" tabindex="-1" role="dialog" aria-labelledby="CommoniFrameModelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="CommoniFrameModelLabel">Modal Title</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="CommoniFrameModelIframe" width="100%" style="height:35rem;" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("ToastMessageBox")
+    <script src="@Configuration["MYContentFilesURL"]lib/font-awesome/js/fontawesome.min.js"></script>
+    <script src="@Configuration["MYContentFilesURL"]js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
